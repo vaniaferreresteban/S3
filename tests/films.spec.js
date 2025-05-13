@@ -293,8 +293,36 @@ describe('Function "orderByYear"', () => {
 // Exercise 6
 // YOUR CODE HERE. Test moviesAverageByCategory()
 describe.only('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('coffee');
+  it('should be declared', () => {
+    expect(typeof moviesAverageByCategory).toBe('function');
+  });
+
+  it('should return a number', () => {
+    expect(moviesAverageByCategory(movies), Number).toBe('number');
+  });
+
+  it('should return a number with the average of a genre', () => {
+    const testArr = [
+      {
+        title: 'Paths of Glory',
+        year: 1957,
+        director: 'Stanley Kubrick',
+        duration: '1h 28min',
+        genre: ['Drama', 'War'],
+        score: 8.4
+      },
+      {
+        title: 'Django Unchained',
+        year: 2012,
+        director: 'Quentin Tarantino',
+        duration: '2h 45min',
+        genre: ['Drama', 'Western'],
+        score: 8.4
+      }
+    ];
+    expect(moviesAverageByCategory(testArr, 'Western')).toEqual([
+      8.4
+    ]);
   });
 });
 

@@ -54,7 +54,6 @@ function orderByYear(array) {
     return { 'title': object.title, 'year': object.year };
   });
   return result
-
 }
 
 // Exercise 6: Calculate the average of the movies in a category
