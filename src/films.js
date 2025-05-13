@@ -57,8 +57,14 @@ function orderByYear(array) {
 }
 
 // Exercise 6: Calculate the average of the movies in a category
-function moviesAverageByCategory() {
-
+function moviesAverageByCategory(array, genre) {
+  let moviesByGenre = array.filter((movie) => movie.genre.find(value => value == genre));
+  let result = 0;
+  for (let movie of moviesByGenre) {
+    result += movie.score;
+  }
+  result = parseFloat(result / moviesByGenre.length);
+  return result;
 }
 
 // Exercise 7: Modify the duration of movies to minutes
@@ -70,8 +76,6 @@ function hoursToMinutes() {
 function bestFilmOfYear() {
 
 }
-
-
 
 // The following is required to make unit tests work.
 /* Environment setup. Do not modify the below code. */
