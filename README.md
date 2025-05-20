@@ -1,86 +1,44 @@
-# Sprint 3 IT Academy | Video management tool
+# Spring 3 - ITAcademy
 
-## Introduction
+## Descripción
 
-A company in the audiovisual sector has asked us for a web application that will allow their employees to quickly find movies from a large database they have, since the process is currently done manually.
+Este proyecto forma parte de un ejercicio de la IT Academy donde el objetivo principal no es desarrollar una funcionalidad visible en pantalla, sino **superar una serie de tests predefinidos**. 
 
-You will be in charge of setting up the core of the application: all the logic of filtering and sorting of movies. You have 2 weeks to finish, which is how long this sprint lasts.
+## Tecnologías Utilizadas
 
-<br>
+Este proyecto utiliza las siguientes tecnologías y herramientas para el testing:
 
-## Requirements
+- **Node.js**: Entorno de ejecución de JavaScript.
+- **Jest**: Framework de testing de JavaScript
 
+## Instalación
 
-1. Clone this repo
-```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
-```
+Para configurar y ejecutar este proyecto localmente, sigue los siguientes pasos:
 
-2. Unlink your repo from the itacademy repository
-```bash
-$ git remote rm origin
-```
+1.  **Clona tu repositorio:**
 
-3. Link your repo to the repository you have to create in your github account
-```bash
-$ git remote add origin <your repo name!>
-```
+    ```bash
+    git clone https://github.com/vaniaferreresban/S3.git
+    cd S3
+    ```
 
-<br>
+2.  **Instala las dependencias:**
+    Utiliza npm para instalar todas las dependencias del proyecto, incluyendo las de desarrollo:
+    ```bash
+    npm install
+    ```
 
-## Submission
+## Scripts
 
-1. Upon completion, run the following commands:
+El archivo `package.json` define varios scripts que facilitan la ejecución y el seguimiento de los tests:
 
-```bash
-$ git add .
-$ git commit -m "Sprint Solution"
-$ git push origin master
-```
+- **`npm test`**: Ejecuta todos los tests una vez y muestra los resultados detallados en la consola. Además, genera los informes HTML y JUnit configurados.
 
-2. Create Pull Request.
+  ```bash
+  npm test
+  ```
 
-3. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
-
-
-
-<br>
-
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-## Tests!
-
-
-```shell
-$ npm install
-$ npm run test:watch
-```
-
-And last, open the generated `test-results.html` file with the "Live Server" VSCode extension to see test results.
-
-Apart from the statement, you will know exactly what you are asked to do by looking at the file `tests/films.spec.js`, all tests are already defined here!
-
-<br>
-
-## Instructions
-
-You have the following indications from the frontend responsible:
-
-- It is mandatory to implement all loops in ES6 (using map, reduce, filter and sort to manipulate arrays).
-
-- As at the moment we don't consume data from a server using an API, we will work with data from the src/data.js archive. For the moment we will implement the logic using
-an array of information about 250 movies.
-
-- The implementation is about processing this array of movies, to display it as requested in each exercise.
-
-- The logic to implement will be placed in the src/films.js file.
-
-- You don't need to show the result of each function on the screen. Your goal is to pass the tests.  More information on how to program oriented to pass tests at the end of the document.
-
-- Don't forget to include the capture of the test results in the virtual campus.
-
-
+- **`npm test:watch`**: Ejecuta los tests en modo de observación. Jest se mantendrá en ejecución y volverá a ejecutar los tests automáticamente cada vez que detecte cambios en los archivos en las carpetas relevantes (como `src` o `tests`). Esto es útil para el desarrollo iterativo.
+  ```bash
+  npm run test:watch
+  ```
